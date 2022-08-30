@@ -1,9 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\customerController;
-
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,23 +12,7 @@ use App\Http\Controllers\customerController;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('dashboard');
 });
-//Rutas de curso: Ruta de Lista
-Route::get('/', [customerController::class, 'listaCustomer'])->name('listaCustomer');
 
-
-//Ruta de Formulario Guardar
-Route::get('/formCustomer', [customerController::class, 'formCustomer']);
-
-//Ruta para Guardar al categoryController
-Route::post('/customer/crearCustomer', [customerController::class, 'guardarCustomer'])->name('Customer.save');
-
-//Ruta de Formulario Editar
-Route::get('/editformCustomer/{id}', [customerController::class, 'editformCustomer'])->name('editformCustomer');
-
-//Ruta para Editar
-Route::patch('/editCustomer/{id}', [customerController::class, 'editCustomer'])->name('editCustomer');
-
-//Ruta para Eliminar
-Route::delete('/deleteCustomer/{id}', [customerController::class, 'destroy'])->name('deleteCustomer');
+Route::resource('customers', 'CustomerController', ['except' => 'show', 'create', 'edit']);
