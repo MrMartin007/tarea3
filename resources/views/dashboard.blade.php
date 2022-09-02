@@ -1,12 +1,14 @@
 @extends('app')
 
+
 @section('content')
+
 
     <div id="crud" class="row">
         <div class="col-xs-12">
-            <h1 class="page-header">CRUD Laravel y VUEjs</h1>
+            <h1 class="page-header">Crud Customer Desarrollo Web</h1>
         </div>
-        <div class="col-sm-7">
+        <div class="col-sm-12">
             <a href="#" class="btn btn-primary pull-right" data-toggle="modal" data-target="#create">
                 Nueva tarea
             </a>
@@ -32,7 +34,7 @@
                         <a href="#" class="btn btn-warning btn-sm" v-on:click.prevent="editDato(dato)">Editar</a>
                     </td>
                     <td width="10px">
-                        <a href="#" class="btn btn-danger btn-sm" v-o:click.prevent="deleteDato(dato)">Eliminar</a>
+                        <a href="#" class="btn btn-danger btn-sm" v-on:click.prevent="deleteDato(dato)">Eliminar</a>
                     </td>
                 </tr>
                 </tbody>

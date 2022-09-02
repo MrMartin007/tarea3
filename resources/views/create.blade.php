@@ -4,9 +4,9 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">
-                        <span>&times;</span>
+                        <span>cerrar</span>
                     </button>
-                    <h4>Crear</h4>
+
                 </div>
                 <div class="modal-body">
                     <label for="name">Nombre</label>

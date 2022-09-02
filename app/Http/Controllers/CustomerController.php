@@ -20,7 +20,7 @@ class CustomerController extends Controller
     {
 
 
-        $customers = Customer::orderBy('id','DESC')->paginate(5);
+        $customers = Customer::orderBy('id')->paginate(5);
 
         return [
             'pagination' => [
